@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Artist Inspiration</title>
+  <style>
+    body {
+      background: #0b0f12;
+      color: #c9d1d9;
+      font-family: Inter, system-ui;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Text panel */
+    .text-panel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+      overflow-y: auto;
+    }
+    .text-panel .panel {
+      background: rgba(15,20,23,0.95);
+      border-radius: 12px;
+      padding: 28px;
+      max-width: 700px;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    h1 {color: #00e6a8; margin-bottom: 16px;}
+    p {line-height: 1.6; font-size: 18px; white-space: pre-wrap;}
+
+    /* Slideshow panel */
+    .slideshow {
+      width: 400px;
+      background: rgba(15,20,23,0.95);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-left: 1px solid rgba(255,255,255,0.03);
+    }
+    .slideshow img {
+      max-width: 100%;
+      max-height: 60vh;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .footer-note {
+      color: #8b9498;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Text panel -->
+  <div class="text-panel">
+    <div class="panel">
+      <h1>Artist Inspiration</h1>
+      <p>
+I created an AI game where the whole goal was to beat those captchas. The point is to show that while AI might seem good some of the time, it isn't always. The idea is that this website was created with AI, and that all this 'Dark Web' stuff that it will become miles easier because you don't have to even know about coding in order to do stuff like this. This is the horrifying truth that all good things aren't cheap. They come at a cost. In this case, the easier committing of illicit crimes like creation of malware with malintent. You can see what I am saying. It is not going good. That is the issue. No matter what is tried someone will always use it for malintent. That is a guarantee. The damage control is what matters. I want the audience to feel like that AI can not be trusted with data management. While AI might seem perfect, it isn't. It can't be. Nothing is perfect. And thats good. Anyway, I used ChatGPT and elevenlabs in order to generate things. The elevenlabs was for the voice and ChatGPT was for the rest. I used many prompts in order to refine it so there is no definite one from this. I reckon that 1 good prompt is better than what I did. I decided to use cats for the AI image as I like cats. I used a playful style so that even kids can play this game and not be afraid. While it may seem all doom and gloom it isn't. This is just the sad reality of new technology. And thats all.
+      </p>
+    </div>
+  </div>
+
+  <!-- Slideshow panel -->
+  <div class="slideshow">
+    <img id="slideImg" src="image1.jpg" alt="Artwork">
+    <div class="footer-note">
+      I used AI cats in order to reach the 3 AI usage goal
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      'image1.jpg', // Replace with your AI images
+      'image2.jpg',
+      'image3.jpg',
+		'image4.jpg',
+		'image5.jpg',
+		'image6.jpg'
+      // Add more images here as needed
+    ];
+    let currentIndex = 0;
+
+    const slideImg = document.getElementById('slideImg');
+
+    function showImage(index) {
+      if(index < 0) index = images.length - 1;
+      if(index >= images.length) index = 0;
+      currentIndex = index;
+      slideImg.style.opacity = 0;
+      setTimeout(() => {
+        slideImg.src = images[currentIndex];
+        slideImg.style.opacity = 1;
+      }, 250); // fade effect
+    }
+
+    // Auto-scroll every 5 seconds
+    setInterval(() => {
+      showImage(currentIndex + 1);
+    }, 5000);
+  </script>
+
+</body>
+</html>
