@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Scholar Party</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Scholar Party</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-content">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>
+                    We'd love to hear from you! Whether you have questions about joining our community, 
+                    want to propose a collaboration, or simply want to connect with fellow scholars, 
+                    don't hesitate to reach out.
+                </p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="institution">Institution/Organization:</label>
+                        <input type="text" id="institution" name="institution">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about yourself, your research interests, or how you'd like to get involved..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+                <p style="text-align: center; margin-top: 2rem;">
+                    <strong>Alternative Contact Methods:</strong><br>
+                    Email: hello@scholarparty.org<br>
+                    Follow us on social media for updates and community discussions
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Scholar Party. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
